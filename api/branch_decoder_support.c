@@ -260,7 +260,7 @@ mambo_branch_type mambo_get_branch_type(mambo_context *ctx) {
 }
 
 void __br_set_addr_w_offset(mambo_context *ctx, enum reg reg, uintptr_t offset) {
-  offset += (uint64_t)mambo_get_source_addr(ctx);
+  offset += (uintptr_t)mambo_get_source_addr(ctx);
   emit_set_reg(ctx, reg, offset);
 }
 
